@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./public/calculator.ico">
+    <meta name="author" content="https://github.com/thuongtruong1009">
+    <meta name="description" content="A mini tool to calculate for your BMI health">
+
+    <title>BMI</title>
+</head>
+
+<body>
+    <header>
+        <h1>BMI caculator </h1>
+        <quote>--- ensure everyone's health ---</quote>
+    </header>
+    <main class="container">
+        <section class="unit">
+            <div id="us btn-us">US - unit</div>
+            <div id="si btn-si">SI - unit</div>
+        </section>
+        <form class="form" id="form" onsubmit="return validateForm()">
+            <div class="age">
+                <label for="fage">Age</label>
+                <input type="text" id="fage" name="fage"><br>
+            </div>
+
+            <div class="gender">
+                <input type="radio" id="fmale" name="fmale">
+                <label for="fmale">Male</label>
+                <input type="radio" id="ffemale" name="ffemale">
+                <label for="ffemale">Female</label><br>
+            </div>
+
+            <div class="size">
+                <label for="fheight">Height <span>(cm):</span></label>
+                <input type="text" id="fheight" name="fheight"><br>
+                <label for="fweight">Weight <span>(kg):</span></label>
+                <input type="text" id="fweight" name="fweight"><br>
+            </div>
+
+            <div class="btn">
+                <button type="button" id="btn-cal">Calculate BMI</button>
+                <button type="button" id="btn-clr">Clear</button>
+            </div>
+
+        </form>
+    </main>
+    <section class="table">
+        <div class="result" id="answer">
+            <h3><em>result: </em></h3>
+            <!--<h3>BMI = 12</h3>
+            <h3>PI = 12</h3>-->
+
+        </div>
+        <div class="index" id="slider">
+            <span id="i">0</span><span style="font-size: 12px;"><em>kg/m<sup>2</sup></em></span>
+            <img src="./public/triangledown.png" />
+        </div>
+        <div class="ruler"></div>
+        <div class="infor" id="status">
+            <ul>
+                <li>Healthy BMI range: 18.5 kg/m<sup>2</sup> - 25 kg/m<sup>2</sup></li>
+                <li>Healthy weight for the height: 59.9 kgs - 81.0 kgs</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <h5>Design by owner <a href="https://github.com/thuongtruong1009/" style="text-decoration: none;color:rgb(248, 242, 156)"><span><sup>&#169;</sup></span>thuongtruong1009 💖</a></h5>
+        <span><i class="fab fa-github-square"></i></span>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
